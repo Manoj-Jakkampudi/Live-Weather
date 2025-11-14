@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        url('https://openweathermap.org/img/wn/01d.png'), /* clear sky */
+        url('https://openweathermap.org/img/wn/02d.png'), /* few clouds */
+        url('https://openweathermap.org/img/wn/03d.png'), /* scattered clouds */
+        url('https://openweathermap.org/img/wn/04d.png'), /* broken clouds */
+        url('https://openweathermap.org/img/wn/09d.png'), /* shower rain */
+        url('https://openweathermap.org/img/wn/10d.png'), /* rain */
+        url('https://openweathermap.org/img/wn/11d.png'), /* thunderstorm */
+        url('https://openweathermap.org/img/wn/13d.png'), /* snow */
+        url('https://openweathermap.org/img/wn/50d.png'); /* mist */
+    background-size: 50px 50px, 40px 40px, 60px 60px, 45px 45px, 55px 55px, 50px 50px, 65px 65px, 50px 50px, 40px 40px;
+    background-repeat: no-repeat;
+    background-position:
+        10% 20%, 30% 60%, 50% 10%, 70% 40%, 20% 80%, 60% 70%, 80% 30%, 40% 90%, 90% 60%;
+    opacity: 0.2;
+    z-index: -1;
+}
+input {
+    padding: 1rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    font-family: inherit;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    font-size: 1rem;
+}
+input:focus {
+    outline: none;
+}
+.weather {
+    text-align: center;
+    font-size: 2rem;
+}
+.weather h2 {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+} /* .weather img{ transform: scale(2); } */
